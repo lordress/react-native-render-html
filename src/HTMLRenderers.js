@@ -86,14 +86,14 @@ export function ul (htmlAttribs, children, convertedCSSStyles, passProps = {}) {
                         marginRight: 10,
                         width: baseFontSize / 2.8,
                         height: baseFontSize / 2.8,
-                        marginTop: baseFontSize / 2,
+                        marginTop: baseFontSize / 2 + 4,
                         borderRadius: baseFontSize / 2.8,
                         backgroundColor: 'black'
                     }} />
                 );
             } else if (rawChild.parentTag === 'ol') {
                 prefix = listsPrefixesRenderers && listsPrefixesRenderers.ol ? listsPrefixesRenderers.ol(...rendererArgs) : (
-                    <Text style={{ marginRight: 5, fontSize: baseFontSize }}>{ index + 1 })</Text>
+                    <Text style={{ marginRight: 5, fontSize: baseFontSize, lineHeight: 26 }}>{ index + 1 })</Text>
                 );
             }
         }
